@@ -19,7 +19,7 @@ images = np.multiply(images, 1.0/255.0)
 x_batch = images.reshape(1, image_size,image_size,num_channels)
 
 sess = tf.Session()
-saver = tf.train.import_meta_graph('dogs-cats-model.meta')
+saver = tf.train.import_meta_graph('cards-model.meta')
 saver.restore(sess, tf.train.latest_checkpoint('./'))
 
 graph = tf.get_default_graph()
